@@ -78,6 +78,11 @@ public class Operand implements Function{
                 return argument == Argument.ARGUMENT ? arg : value;
         }
     }
+
+    public String toString(){
+        Double d = this.eval(0);
+        return d.toString();
+    }
 }
 enum Argument{
     ARGUMENT,

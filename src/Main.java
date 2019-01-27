@@ -16,9 +16,13 @@ public class Main {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String s = bufferedReader.readLine();
         ExString f = new ExString(s);
-        ArrayList<Object> l = f.getObjectList();
-        Expression e = f.StrToExpr();
-        System.out.println(e.eval(2));
+        /*for (Object o : f.INtoRPN()){
+            System.out.println(o);
+        }*/
+        Function e = f.StrToExpr();
+        for(double i = 0; i<10 ; i+=0.1){
+            System.out.println(e.eval(i));
+        }
     }
 
     public static String format(String inputString){
